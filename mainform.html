@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru-UA">
+<head>
+	<title>form validation</title>
+	
+</head>
+<body>
+	
+	<form action="" method="get" id="formSection">
+		<div class="box">
+			<label for="name">Name</label>
+			<input name="name" value="" id="formName" validate-required validate-minlength="5" validate-maxlength="30" />
+		</div>
+		<div class="box">
+			<label for="email">Email</label>
+			<input name="email" value="" validate-required validate-email />
+		</div>
+		<div class="box">
+			<label for="date">Date</label>
+			<input name="date" value=""  validate-date />
+		</div>
+		<div class="box">
+			<label for="ip">IP</label>
+			<input name="ip" value="" validate-regexp="^\d+\.\d+\.\d+\.\d+$" />
+		</div>
+		<div class="box">
+			<input type="submit" value="Send" />
+		</div>
+	</form>
+
+
+	<script src="jquery.min.js"></script>
+	<script src="jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/additional-methods.min.js"></script>
+	<script src="main.js"></script>
+	
+	<style >
+	.box {
+		
+	}
+	input {
+		display: flex;
+		align-items: center;
+		border:1.5px dashed black;
+		border-radius: 5px;
+		
+	}
+</style>
+</body>
+</html>
